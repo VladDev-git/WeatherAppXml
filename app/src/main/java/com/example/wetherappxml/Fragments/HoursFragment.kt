@@ -1,15 +1,13 @@
 package com.example.wetherappxml.Fragments
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wetherappxml.MainViewModel
-import com.example.wetherappxml.R
 import com.example.wetherappxml.adapters.WeatherAdapter
 import com.example.wetherappxml.adapters.WeatherModel
 import com.example.wetherappxml.databinding.FragmentHoursBinding
