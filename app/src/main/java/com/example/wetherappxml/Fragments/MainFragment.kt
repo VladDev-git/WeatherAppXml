@@ -63,8 +63,6 @@ class MainFragment : Fragment() {
         checkPermission()
         init()
         updateCurrentCard()
-        getLocation()
-        //requestWeatherData("Kamin-Kashirskyi")
     }
 
     override fun onResume() {
@@ -110,6 +108,10 @@ class MainFragment : Fragment() {
     }
 
     private fun getLocation() {
+        if (!isLocationEnabled()) {
+            Toast.makeText(activity, "Location disabled", Toast.LENGTH_SHORT).show()
+            return
+        }
         val ct = CancellationTokenSource()
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
